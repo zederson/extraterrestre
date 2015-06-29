@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Extraterrestre</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Automação de Dispositivos de Casa">
+    <meta name="author" content="Ederson">
+    <title>Minha Casa ....</title>
 
-<%= yield %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+  </head>
 
-</body>
+  <body>
+    <section id="container" >
+      <!--header start-->
+      <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+          <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <a href="index.html" class="logo"><b>Bender</b></a>
+        <!--logo end-->
+        <div class="nav notify-row" id="top_menu">
+          <!--  notification start -->
+          <!--  notification end -->
+        </div>
+        <div class="top-menu">
+          <ul class="nav pull-right top-menu">
+            <li><a class="logout" href="login.html">Logout</a></li>
+          </ul>
+        </div>
+      </header>
+      <!--header end-->
+
+        <!--sidebar start-->
+        <aside> <%= render 'layouts/shared/menu' %> </aside>
+        <!--sidebar end-->
+
+          <!--main content start-->
+          <section id="main-content">
+            <section class="wrapper site-min-height">
+              <%= yield %>
+            </section>
+          </section>
+          <!--main content end-->
+
+          <!--footer start-->
+          <footer class="site-footer">
+            <div class="text-center">
+              2015 - Ederson de Lima
+              <a href="#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+              </a>
+            </div>
+          </footer>
+          <!--footer end-->
+    </section>
+
+    <%= javascript_include_tag 'application' %>
+    <!--script for this page-->
+    <script>
+      $(function(){
+        $("html").niceScroll({styler:"fb",cursorcolor:"#4ECDC4", cursorwidth: '6', cursorborderradius: '10px', background: '#404040', spacebarenabled:false,  cursorborder: '', zindex: '1000'});
+        $("#sidebar").niceScroll({styler:"fb",cursorcolor:"#4ECDC4", cursorwidth: '3', cursorborderradius: '10px', background: '#404040', spacebarenabled:false, cursorborder: ''});
+      });
+    </script>
+  </body>
 </html>
