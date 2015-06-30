@@ -1,0 +1,13 @@
+<li class="<%= list_class_random %>">
+  <div class="task-title">
+    <span class="task-title-sp"><b><%= trigger.name %></b></span>
+    - <%= trigger.description %>
+    <div class="pull-right hidden-phone">
+      <%= link_to trigger, class: 'btn btn-success btn-xs' do %> <i class=" fa fa-check"></i> <% end %>
+      <%= link_to edit_trigger_path(trigger), class: 'btn btn-primary btn-xs' do %><i class=" fa fa-pencil"></i><% end %>
+      <%= link_to trigger, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' do %>
+        <i class=" fa fa-trash-o"></i>
+      <% end %>
+    </div>
+  </div>
+</li>

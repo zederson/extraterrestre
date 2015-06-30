@@ -13,6 +13,10 @@ module Extraterrestre
     config.exceptions_app                 = routes
     config.autoload_paths += %W(#{config.root}/lib)
     config.middleware.delete Rack::Lock
+    config.generators.stylesheets = false
+    config.generators.javascripts = false
+    config.generators.helper      = false
+    config.generators.jbuilder    = false
 
     config.log_tags ||= []
     config.log_tags += [:uuid]

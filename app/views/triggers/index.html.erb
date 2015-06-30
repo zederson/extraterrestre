@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row mt">
+  <div class="col-md-12">
+    <section class="task-panel tasks-widget">
+      <div class="panel-heading">
+        <div class="pull-left"><h5><i class="fa fa-tasks"></i> Lista de Triggers </h5></div>
+        <br>
+      </div>
+      <div class="panel-body">
+        <div class="task-content">
+          <ul class="task-list ui-sortable">
+            <%= render partial: 'triggers/shared/index_items', collection: @triggers, as: :trigger %>
+          </ul>
+        </div>
+
+        <div class=" add-task-row">
+          <%= link_to 'New Trigger', new_trigger_path, class: 'btn btn-success btn-sm pull-left' %>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*.rb'
+    - 'config/unicorn/*.rb'
+
+LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
