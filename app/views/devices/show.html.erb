@@ -1,0 +1,33 @@
+<div class="row mt">
+  <div class="col-md-12">
+    <section class="task-panel tasks-widget">
+      <div class="panel-heading">
+        <div class="pull-left"><h5><i class="fa fa-tasks"></i> Device </h5></div>
+        <br>
+      </div>
+      <div class="panel-body">
+        <div class="task-content">
+          <ul class="task-list">
+            <li>
+              <div class="task-title">
+                <b>Name: </b>
+                <span class="task-title-sp"><%= @device.name %></span>
+              </div>
+            </li>
+            <li>
+              <div class="task-title">
+                <b>Description: </b>
+                <span class="task-title-sp"><%= @device.description %></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class=" add-task-row">
+          <%= link_to 'Edit', edit_device_path(@device), class: 'btn btn-success btn-sm pull-left' %>
+          <%= link_to 'Back', devices_path, class: 'btn btn-default btn-sm pull-right' %>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

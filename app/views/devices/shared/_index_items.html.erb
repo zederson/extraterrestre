@@ -1,0 +1,13 @@
+<li class="<%= list_class_random %> ">
+  <div class="task-title">
+    <span class="task-title-sp"><b><%= device.name %></b></span>
+    <br> <small><%= device.description %></small>
+    <div class="pull-right ">
+      <%= link_to device, class: 'btn btn-success btn-xs' do %> <i class=" fa fa-check"></i> <% end %>
+      <%= link_to edit_device_path(device), class: 'btn btn-primary btn-xs' do %><i class=" fa fa-pencil"></i><% end %>
+      <%= link_to device, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' do %>
+        <i class=" fa fa-trash-o"></i>
+      <% end %>
+    </div>
+  </div>
+</li>

@@ -16,7 +16,7 @@ RSpec.describe "triggers/index", type: :view do
 
   it "renders a list of triggers" do
     render
-    assert_select "tr>td", :text => "Name".to_s, :count => 2
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
+    assert_select 'span.task-title-sp>b', :text => "Name".to_s, :count => 2
+    assert_select 'div.task-title>small', :text => "MyText".to_s, :count => 2
   end
 end
