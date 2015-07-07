@@ -7,7 +7,7 @@ gem 'jbuilder',       '~> 2.0'
 gem 'bcrypt',         '~> 3.1.7'
 gem 'active_decorator'
 gem 'jquery-rails'
-gem 'recursive-open-struct'  , require: 'recursive_open_struct'
+gem 'recursive-open-struct', require: 'recursive_open_struct'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

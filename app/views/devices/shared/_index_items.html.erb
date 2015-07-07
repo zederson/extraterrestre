@@ -1,6 +1,7 @@
 <li class="<%= list_class_random %> ">
   <div class="task-title">
     <span class="task-title-sp"><b><%= device.name %></b></span>
+    <label><span class="fa <%= device_type_icon device.device_type %>"></span></label>
     <br> <small><%= device.description %></small>
     <div class="pull-right ">
       <%= link_to device, class: 'btn btn-success btn-xs' do %> <i class=" fa fa-check"></i> <% end %>

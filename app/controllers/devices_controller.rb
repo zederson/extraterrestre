@@ -38,11 +38,12 @@ class DevicesController < ApplicationController
   end
 
   private
-    def set_device
-      @device = Device.find(params[:id])
-    end
 
-    def device_params
-      params.require(:device).permit(:name, :description)
-    end
+  def set_device
+    @device = Device.find(params[:id])
+  end
+
+  def device_params
+    params.require(:device).permit(:name, :description, :device_type)
+  end
 end

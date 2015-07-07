@@ -39,11 +39,12 @@ class TriggersController < ApplicationController
   end
 
   private
-    def set_trigger
-      @trigger = Trigger.find(params[:id])
-    end
 
-    def trigger_params
-      params.require(:trigger).permit(:name, :description)
-    end
+  def set_trigger
+    @trigger = Trigger.find(params[:id])
+  end
+
+  def trigger_params
+    params.require(:trigger).permit(:name, :description)
+  end
 end

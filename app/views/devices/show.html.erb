@@ -20,6 +20,13 @@
                 <span class="task-title-sp"><%= @device.description %></span>
               </div>
             </li>
+            <li>
+              <div class="task-title">
+                <b>Type: </b>
+                <span class="task-title-sp"><%= @device.device_type %></span>
+                <label><span class="fa <%= device_type_icon @device.device_type %>"></span></label>
+              </div>
+            </li>
           </ul>
         </div>
 
