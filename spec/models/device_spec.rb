@@ -8,6 +8,7 @@ RSpec.describe Device, type: :model do
     it { is_expected.to have_db_column(:description).of_type(:text) }
   end
 
+  it { should have_many(:device_configurations) }
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:device_type) }
 

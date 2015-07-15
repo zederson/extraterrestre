@@ -1,0 +1,39 @@
+<div class="row mt">
+  <div class="col-md-12">
+    <section class="task-panel tasks-widget">
+      <div class="panel-heading">
+        <div class="pull-left"><h5><i class="fa fa-tasks"></i> Configuração do Dispositivo</h5></div>
+        <br>
+      </div>
+      <div class="panel-body">
+        <div class="task-content">
+          <ul class="task-list">
+            <li>
+              <div class="task-title">
+                <b>Name: </b>
+                <span class="task-title-sp"><%= @device_configuration.name %></span>
+              </div>
+            </li>
+            <li>
+              <div class="task-title">
+                <b>Description: </b>
+                <span class="task-title-sp"><%= @device_configuration.description %></span>
+              </div>
+            </li>
+            <li>
+              <div class="task-title">
+                <b>Content: </b>
+                <span class="task-title-sp"><%= @device_configuration.content %></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class=" add-task-row">
+          <%= link_to 'Edit', edit_device_device_configuration_path(@device, @device_configuration), class: 'btn btn-success btn-sm pull-left' %>
+          <%= link_to 'Back', device_device_configurations_path(@device, @device_configuration), class: 'btn btn-default btn-sm pull-right' %>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

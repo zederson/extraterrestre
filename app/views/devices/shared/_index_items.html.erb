@@ -4,6 +4,7 @@
     <label><span class="fa <%= device_type_icon device.device_type %>"></span></label>
     <br> <small><%= device.description %></small>
     <div class="pull-right ">
+      <%= link_to device_device_configurations_path(device), class: 'btn btn-success btn-xs' do %> <i class=" fa fa-check"></i> <% end %>
       <%= link_to device, class: 'btn btn-success btn-xs' do %> <i class=" fa fa-check"></i> <% end %>
       <%= link_to edit_device_path(device), class: 'btn btn-primary btn-xs' do %><i class=" fa fa-pencil"></i><% end %>
       <%= link_to device, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' do %>
