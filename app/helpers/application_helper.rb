@@ -6,6 +6,6 @@ module ApplicationHelper
   end
 
   def device_type_icon(type)
-    type == Device::In ? 'fa-sign-in' : 'fa-hand-o-up'
+    type == Device::IN ? 'fa-sign-in' : 'fa-hand-o-up'
   end
 end

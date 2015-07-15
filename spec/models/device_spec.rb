@@ -13,8 +13,8 @@ RSpec.describe Device, type: :model do
   it { should validate_presence_of(:device_type) }
 
   describe '.Types' do
-    it { expect(Device::Types).to contain_exactly('in', 'out') }
-    it { expect(Device::In).to eql 'in' }
-    it { expect(Device::Out).to eql 'out' }
+    it { expect(Device::TYPES).to contain_exactly('in', 'out') }
+    it { expect(Device::IN).to eql 'in' }
+    it { expect(Device::OUT).to eql 'out' }
   end
 end

@@ -17,10 +17,12 @@ class DeviceConfigurationsController < ApplicationController
   end
 
   def create
-    @device_configuration = DeviceConfiguration.new(device_configuration_params.merge(device_id: @device.id))
+    hash = device_configuration_params.merge(device_id: @device.id)
+    @device_configuration = DeviceConfiguration.new(hash)
 
     if @device_configuration.save
-      redirect_to device_device_configurations_path(@device, @device_configuration), notice: 'Device configuration was successfully created.'
+      path = device_device_configurations_path(@device, @device_configuration)
+      redirect_to path, notice: 'Device configuration was successfully created.'
     else
       render :new
     end
@@ -28,7 +30,8 @@ class DeviceConfigurationsController < ApplicationController
 
   def update
     if @device_configuration.update(device_configuration_params)
-      redirect_to device_device_configuration_path(@device, @device_configuration), notice: 'Device configuration was successfully updated.'
+      path = device_device_configuration_path(@device, @device_configuration)
+      redirect_to path, notice: 'Device configuration was successfully updated.'
     else
       render :edit
     end
@@ -41,15 +44,16 @@ class DeviceConfigurationsController < ApplicationController
   end
 
   private
-    def set_device_configuration
-      @device_configuration = DeviceConfiguration.find(params[:id])
-    end
 
-    def device_configuration_params
-      params.require(:device_configuration).permit(:name, :description, :content)
-    end
+  def set_device_configuration
+    @device_configuration = DeviceConfiguration.find(params[:id])
+  end
 
-    def set_device
-      @device = Device.find(params[:device_id])
-    end
+  def device_configuration_params
+    params.require(:device_configuration).permit(:name, :description, :content)
+  end
+
+  def set_device
+    @device = Device.find(params[:device_id])
+  end
 end
