@@ -3,6 +3,11 @@
     <section class="task-panel tasks-widget">
       <div class="panel-heading">
         <div class="pull-left"><h5><i class="fa fa-tasks"></i> Device </h5></div>
+        <div class="pull-right">
+          <%= link_to device_device_configurations_path(@device), class: 'btn btn-theme02 btn-xs' do %>
+            <i class=" fa fa-cog fa-spin"></i> Configurações
+          <% end %>
+        </div>
         <br>
       </div>
       <div class="panel-body">
