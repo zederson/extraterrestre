@@ -1,5 +1,4 @@
 <div id="sidebar"  class="nav-collapse ">
-  <!-- sidebar menu start-->
   <ul class="sidebar-menu" id="nav-accordion">
     <p class="centered"> <a href="#"> <%= image_tag("ui-bender.png", class: 'img-circle', width: '60') %> </a> </p>
     <h5 class="centered">Ederson de Lima</h5>
@@ -12,12 +11,16 @@
     </li>
     <li class="mt">
       <%= link_to devices_path do %>
-        <i class="fa fa-cogs"></i>
+        <i class="fa fa-lightbulb-o"></i>
         <span>Devices</span>
       <% end %>
     </li>
-
+    <li class="mt">
+      <%= link_to activities_path do %>
+        <i class="fa fa-bolt"></i>
+        <span>Atividades</span>
+      <% end %>
+    </li>
   </ul>
-  <!-- sidebar menu end-->
 </div>
 

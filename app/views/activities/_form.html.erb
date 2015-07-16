@@ -1,0 +1,27 @@
+<div class="col-md-12">
+  <div class="form-panel">
+    <h4 class="mb"><i class="fa fa-angle-right"></i> Configuração do Dispositivo</h4>
+
+    <%= form_for @activity, html: { class: 'form-horizontal style-form' } do |f| %>
+      <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label"><%= f.label :trigger_id %></label>
+        <div class="col-sm-10">
+          <%= f.collection_select(:trigger_id, triggers_for_select, :id, :name, {prompt: true}, { class: 'form-control' })%>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label"><%= f.label :device_configuration_id  %></label>
+        <div class="col-sm-10">
+          <%= f.collection_select(:device_configuration_id, configurations_for_select, :id, :name, {prompt: true}, { class: 'form-control' })%>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <%= f.submit class: 'btn btn-theme02' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

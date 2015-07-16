@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :activities
   resources :devices do
     resources :device_configurations
   end

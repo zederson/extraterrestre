@@ -1,0 +1,13 @@
+<li class="<%= list_class_random %> ">
+  <div class="task-title">
+    <span class="task-title-sp"><b><%= activity.trigger.name %></b></span>
+    <br> <small><%= activity.device_configuration.name %></small>
+    <div class="pull-right ">
+      <%= link_to activity_path(activity), class: 'btn btn-success btn-xs' do %> <i class=" fa fa-check"></i> <% end %>
+      <%= link_to edit_activity_path(activity), class: 'btn btn-primary btn-xs' do %><i class=" fa fa-pencil"></i><% end %>
+      <%= link_to activity_path(activity), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' do %>
+        <i class=" fa fa-trash-o"></i>
+      <% end %>
+    </div>
+  </div>
+</li>
