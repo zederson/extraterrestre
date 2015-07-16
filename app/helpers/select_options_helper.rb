@@ -1,5 +1,4 @@
 module SelectOptionsHelper
-
   def triggers_for_select
     Trigger.all.order(:name)
   end
