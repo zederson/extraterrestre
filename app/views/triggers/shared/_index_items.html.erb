@@ -3,6 +3,9 @@
     <span class="task-title-sp"><b><%= trigger.name %></b></span>
     <br> <small><%= trigger.description %></small>
     <div class="pull-right ">
+
+      <a href='#' class='btn btn-theme01 btn-xs trigger_execute' data-name='<%= trigger.name%>' > <i class=" fa fa-play-circle"></i> </a>
+
       <%= link_to trigger, class: 'btn btn-success btn-xs' do %> <i class=" fa fa-check"></i> <% end %>
       <%= link_to edit_trigger_path(trigger), class: 'btn btn-primary btn-xs' do %><i class=" fa fa-pencil"></i><% end %>
       <%= link_to trigger, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' do %>

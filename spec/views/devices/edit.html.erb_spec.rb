@@ -12,6 +12,7 @@ RSpec.describe 'devices/edit', type: :view do
 
     assert_select 'form[action=?][method=?]', device_path(@device), 'post' do
       assert_select 'input#device_name[name=?]', 'device[name]'
+      assert_select 'input#device_module_name[name=?]', 'device[module_name]'
       assert_select 'textarea#device_description[name=?]', 'device[description]'
       assert_select 'input#device_device_type[name=?]', 'device[device_type]'
     end

@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150716000353) do
 
   create_table "devices", force: :cascade do |t|
     t.string   "name"
+    t.string   "module_name"
     t.string   "device_type"
     t.text     "description"
     t.datetime "created_at",  null: false

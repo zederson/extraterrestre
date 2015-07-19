@@ -9,6 +9,7 @@ gem 'active_decorator'
 gem 'jquery-rails'
 gem 'recursive-open-struct', require: 'recursive_open_struct'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'huey'
 
 group :development, :test do
   gem 'pry-rails'

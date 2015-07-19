@@ -4,6 +4,10 @@ require 'rails/all'
 
 Bundler.require(*Rails.groups)
 
+def app_config
+  @app_config ||= RecursiveOpenStruct.new YAML.load_file('config/et.yml')
+end
+
 module Extraterrestre
   class Application < Rails::Application
     config.encoding                       = 'utf-8'

@@ -1,0 +1,4 @@
+hue:
+  user: '0123456789abdcef0123456789abcdef'
+modules:
+  - 'Home::Lamp::Philips'
