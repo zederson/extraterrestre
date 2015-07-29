@@ -1,5 +1,6 @@
 module Api
-  class HouseController < ApplicationController
+  class HouseController < Api::ApplicationController
+    respond_to :json
 
     def trigger
       name = params[:trigger_name]
@@ -7,5 +8,12 @@ module Api
       render status: 200, json: { name: name }
     end
 
+    def toggle
+      puts "===================================================================================================="
+      key = request.headers["Key-Tag"]
+      puts "    >>>> #{key}"
+      HouseToogleServices.toogle
+      head :ok, json: {name: 'Test'}
+    end
   end
 end

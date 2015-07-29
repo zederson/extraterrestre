@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     post '/trigger/:trigger_name', to: 'house#trigger'
+    put '/trigger/toggle', to: 'house#toggle'
   end
 
   resources :activities

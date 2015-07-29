@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'recursive-open-struct', require: 'recursive_open_struct'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'huey'
+gem 'barometer'
+gem 'responders', '~> 2.0'
 
 group :development, :test do
   gem 'pry-rails'
