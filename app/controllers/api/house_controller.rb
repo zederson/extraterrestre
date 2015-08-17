@@ -9,9 +9,7 @@ module Api
     end
 
     def toggle
-      puts "===================================================================================================="
       key = request.headers["Key-Tag"]
-      puts "    >>>> #{key}"
       HouseToogleServices.toogle
       head :ok, json: {name: 'Test'}
     end
