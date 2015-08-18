@@ -206,6 +206,7 @@ DEPENDENCIES
   database_cleaner (~> 1.4.1)
   factory_girl_rails (~> 4.5.0)
   faker (~> 1.4.3)
+  httpclient
   huey
   jbuilder (~> 2.0)
   jquery-rails
@@ -221,4 +222,4 @@ DEPENDENCIES
   wkhtmltopdf-binary
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

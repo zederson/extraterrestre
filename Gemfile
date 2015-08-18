@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'huey'
 gem 'barometer'
 gem 'responders', '~> 2.0'
+gem "httpclient"
 
 group :development, :test do
   gem 'pry-rails'

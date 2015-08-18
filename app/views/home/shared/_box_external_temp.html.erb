@@ -1,0 +1,29 @@
+<div class="col-lg-4 col-md-4 col-sm-4 mb">
+  <div class="weather-2 pn">
+    <div class="weather-2-header">
+      <div class="row">
+        <div class="col-sm-6 col-xs-6">
+          <p><%= @weather.location %></p>
+        </div>
+        <div class="col-sm-6 col-xs-6 goright">
+          <p class="small"><%= l Time.now, :format => :short %></p>
+        </div>
+      </div>
+    </div>
+    <div class="row centered">
+      <img src="img/ny.jpg" class="img-circle" width="120">
+    </div>
+    <div class="row data">
+      <div class="col-sm-6 col-xs-6 goleft">
+        <h4><b><%= @weather.temperature %> </b></h4>
+        <h6><%= @weather.high %> max</h6>
+        <h6><%= @weather.low %> min</h6>
+      </div>
+      <div class="col-sm-6 col-xs-6 goright">
+        <span> <%= print_weather_icon @weather.icon %> </span>
+        <h6><b><%= @weather.condition %></b></h6>
+        <h6> <p class=""><i class="fa fa-tint"></i> <%= @weather.humidity.to_i %>%</p> </h6>
+      </div>
+    </div>
+  </div>
+</div>

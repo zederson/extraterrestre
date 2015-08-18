@@ -1,0 +1,14 @@
+<div class="col-md-4 col-sm-4 mb">
+  <div class="green-panel pn">
+    <div class="green-header">
+      <h5>Luminosidade</h5>
+    </div>
+    <h1 class="mt"> <i class="fa fa-lightbulb-o fa-2x"></i> </h1>
+    <h1><%= number_to_percentage(@bender.luminosity_percent, precision: 0)  %> </h1>
+    <footer>
+      <div class="centered">
+        <h6>Controle Lampada: <%= t "bender.lamp_#{@bender.luminosity_status}"%></h6>
+      </div>
+    </footer>
+  </div>
+</div>
