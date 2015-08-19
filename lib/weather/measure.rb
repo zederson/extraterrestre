@@ -53,7 +53,7 @@ module Weather
     end
 
     def self.cache
-      @@cache ||= ActiveSupport::Cache::MemoryStore.new({ expires_in: 10.minutes })
+      @@cache ||= ActiveSupport::Cache::MemoryStore.new({ expires_in: 1.hour })
     end
   end
 end

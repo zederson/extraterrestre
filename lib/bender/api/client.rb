@@ -23,7 +23,7 @@ module Bender
       def put(uri, payload)
         url      = "#{endpoint}#{uri}"
 
-        response = HTTPClient.put(url, payload, headers)
+        response = HTTPClient.put(url, payload.to_json, headers)
         return {} unless response
 
         response = JSON.parse(response.content)

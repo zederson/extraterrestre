@@ -15,4 +15,8 @@ module ApplicationHelper
     ic = "#{prefix}#{icon}"
     image_tag("http://icons.wxug.com/i/c/k/#{ic}.gif", size: "35x35")
   end
+
+  def icon_sensor_light_name(value)
+    value == 'true' ? 'fa-info-circle' : 'fa-check-circle'
+  end
 end

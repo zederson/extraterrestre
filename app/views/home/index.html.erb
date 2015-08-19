@@ -9,3 +9,7 @@
     </div>
   </div>
 </div>
+
+<% content_for :javascript do %>
+  $(document).ready(bender.init);
+<% end %>

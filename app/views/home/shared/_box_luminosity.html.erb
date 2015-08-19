@@ -7,7 +7,14 @@
     <h1><%= number_to_percentage(@bender.luminosity_percent, precision: 0)  %> </h1>
     <footer>
       <div class="centered">
-        <h6>Controle Lampada: <%= t "bender.lamp_#{@bender.luminosity_status}"%></h6>
+        <h6>
+          <strong id="result_light_sensor_lamps">
+          </strong>
+          <a href="" id="controll_lights_sensor" data-target="#result_light_sensor_lamp" data-hidden="#status_sensor_luminosity">
+            <i id='result_light_sensor_lamp' class="fa <%= icon_sensor_light_name @bender.luminosity_status %> fa-2x"></i>
+          </a>
+          <input type='hidden' value='<%= @bender.luminosity_status %>' id= 'status_sensor_luminosity'>
+        </h6>
       </div>
     </footer>
   </div>

@@ -49,6 +49,11 @@ module Bender
         client = Bender::Api::Client.new
         client.get_resource('/bender/status')
       end
+
+      def self.sensor_light(val)
+        client = Bender::Api::Client.new
+        client.put '/bender/lights/', { status: val }
+      end
     end
   end
 end

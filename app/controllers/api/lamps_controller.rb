@@ -2,6 +2,11 @@ module Api
   class LampsController < Api::ApplicationController
     respond_to :json
 
+    def sensor_light
+      result = Bender::Api::Model.sensor_light params[:status]
+      render :ok, json: { status: result['status'] }
+    end
+
     def update
       change_lamp
       head :ok
