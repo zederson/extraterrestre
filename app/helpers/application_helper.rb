@@ -10,13 +10,14 @@ module ApplicationHelper
   end
 
   def print_weather_icon(icon)
+    hour = Time.now.hour
     prefix = ''
-    prefix = 'nt_' if Time.now.hour > 18
+    prefix = 'nt_' if (hour > 18 || hour < 6)
     ic = "#{prefix}#{icon}"
     image_tag("http://icons.wxug.com/i/c/k/#{ic}.gif", size: "35x35")
   end
 
   def icon_sensor_light_name(value)
-    value == 'true' ? 'fa-info-circle' : 'fa-check-circle'
+    value ? 'fa-info-circle' : 'fa-check-circle'
   end
 end

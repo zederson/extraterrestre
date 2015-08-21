@@ -1,14 +1,6 @@
 <h3><i class="fa fa-angle-right"></i> Bender</h3>
 
-<div class="row mt">
-  <div class="col-lg-12">
-    <div class="row">
-      <%= render 'home/shared/box_temp_local' %>
-      <%= render 'home/shared/box_external_temp' %>
-      <%= render 'home/shared/box_luminosity' %>
-    </div>
-  </div>
-</div>
+<%= render 'home/shared/all_box' %>
 
 <% content_for :javascript do %>
   $(document).ready(bender.init);
