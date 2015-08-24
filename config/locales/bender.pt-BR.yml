@@ -1,4 +1,10 @@
 pt-BR:
   bender:
+    status_true: 'Ligado'
+    status_false: 'Desligado'
     lamp_true: 'ligado'
     lamp_false: 'desligado'
+    sockets:
+      SOCKET_1:
+        name: 'Ventilador'
+        icon: 'fa-plug'

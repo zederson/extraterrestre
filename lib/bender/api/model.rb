@@ -21,6 +21,10 @@ module Bender
         result['content'] if result
       end
 
+      def sockets
+        @sockets ||= Bender::Api::Socket.build(content)
+      end
+
       def luminosity_percent
         light = luminosity
         (light.to_f / 1023) * 100

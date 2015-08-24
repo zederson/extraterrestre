@@ -1,31 +1,14 @@
 <div class="row mtbox centered">
   <div class="col-md-2 col-sm-2 col-md-offset-1 box0">
     <div class="box1">
-      <span class="fa fa-lightbulb-o fa-2x"></span>
-      <h3>933</h3>
+      <span class="fa fa-2x <%= socket.icon%>"></span>
+      <h3>
+        <a href='javascript:;' class='socket_controll' data-id='<%= socket.id %>' data-target="#socket_content_<%=socket.id%>" data-value="#socket_value_<%= socket.id%>" >
+          <%= socket.description %>
+        </a>
+      </h3>
+      <input type='hidden' value='<%= socket.status %>' id='socket_value_<%= socket.id %>' >
+      <%= on_off_socket socket.status, socket.id %>
     </div>
-    <p>933 People liked your page the last 24hs. Whoohoo!</p>
   </div>
-  <div class="col-md-2 col-sm-2 box0">
-    <div class="box1">
-      <span class="fa fa-lightbulb-o fa-2x"></span>
-      <h3>23</h3>
-    </div>
-    <p>You have 23 unread messages in your inbox.</p>
-  </div>
-  <div class="col-md-2 col-sm-2 box0">
-    <div class="box1">
-      <span class="fa fa-lightbulb-o fa-2x"></span>
-      <h3>+10</h3>
-    </div>
-    <p>More than 10 news were added in your reader.</p>
-  </div>
-  <div class="col-md-2 col-sm-2 box0">
-    <div class="box1">
-      <span class="fa fa-lightbulb-o fa-2x"></span>
-      <h3>OK!</h3>
-    </div>
-    <p>Your server is working perfectly. Relax &amp; enjoy.</p>
-  </div>
-
 </div>
