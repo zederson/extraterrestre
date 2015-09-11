@@ -7,6 +7,18 @@ module Api
       render :ok, json: { status: result['status'] }
     end
 
+    def set_color
+      bulb = params[:bulb]
+      hue = Huey::Bulb.find(params[:id].to_i)
+      if hue.present?
+        hue.rgb = bulb[:color]
+        hue.on = true
+        hue.commit
+      end
+
+      head :ok
+    end
+
     def update
       change_lamp
       head :ok
